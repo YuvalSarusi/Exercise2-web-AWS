@@ -26,7 +26,7 @@ class search extends React.Component {
 
     getSalesOfUser=()=>{
         const cookies = new Cookies();
-        axios.get("http://localhost:8989/get-user-sales", {
+        axios.get("http://34.227.148.207:8989/get-user-sales", {
             params:{
                 token: cookies.get("logged_in")
             }
@@ -40,7 +40,7 @@ class search extends React.Component {
     }
 
     getAllSalesAfterFilter=(value)=>{
-        axios.get("http://localhost:8989/get-filtered-sales" , {
+        axios.get("http://34.227.148.207:8989/get-filtered-sales" , {
             params:{
                 text: value
             }

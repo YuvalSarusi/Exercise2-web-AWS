@@ -34,7 +34,7 @@ class SignUp extends React.Component {
             let data = new FormData();
             data.append("username", this.state.username)
             data.append("password", this.state.password)
-            axios.post("http://localhost:8989/create-account", data)
+            axios.post("http://34.227.148.207:8989/create-account", data)
                 .then((response) => {
                     if (response.data && response.data!= "usernameExist") {
                         this.setState({

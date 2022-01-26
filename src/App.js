@@ -33,7 +33,7 @@ class App extends React.Component {
         token: token
       })
     }
-    const ws = new WebSocket("ws://localhost:8989/stream?token="+token);
+    const ws = new WebSocket("ws://34.227.148.207:8989/stream?token="+token);
     ws.onmessage = (message) =>{
         const data = JSON.parse(message.data)
         const saleStarted = data.start
@@ -51,7 +51,7 @@ class App extends React.Component {
   }
 
   getAllStores = () => {
-    axios.get("http://localhost:8989/getAllShops")
+    axios.get("http://34.227.148.207:8989/getAllShops")
         .then((response) => {
           let shopList = response.data
           this.setState({

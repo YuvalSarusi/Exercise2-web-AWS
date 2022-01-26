@@ -19,7 +19,7 @@ class Settings extends React.Component {
         let data = new FormData();
         data.append("token", cookies.get("logged_in"))
         data.append("organizationId", parseInt(e.target.value))
-        axios.post("http://localhost:8989/edit-user-to-organization",data )
+        axios.post("http://34.227.148.207:8989/edit-user-to-organization",data )
             .then((response) =>{
                 this.getOrganizationOfUser()
             })
@@ -27,7 +27,7 @@ class Settings extends React.Component {
 
     getOrganizationOfUser=()=>{
         const cookies = new Cookies();
-        axios.get("http://localhost:8989/get-all-organizations-of-user", {
+        axios.get("http://34.227.148.207:8989/get-all-organizations-of-user", {
             params:{
                 token: cookies.get("logged_in")
             }
@@ -41,7 +41,7 @@ class Settings extends React.Component {
     }
 
     getAllOrganization=()=>{
-        axios.get("http://localhost:8989/get-all-organizations")
+        axios.get("http://34.227.148.207:8989/get-all-organizations")
             .then((response) =>{
                 let organization = response.data
                 this.setState({

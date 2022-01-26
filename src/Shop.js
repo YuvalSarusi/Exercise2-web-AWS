@@ -16,7 +16,7 @@ class Shop extends React.Component {
     }
 
     getShopById = ()=>{
-        axios.get("http://localhost:8989/get-shop-by-id",{
+        axios.get("http://34.227.148.207:8989/get-shop-by-id",{
             params:{
                 shopId: parseInt(this.state.id)
             }
@@ -32,7 +32,7 @@ class Shop extends React.Component {
 
 
     getAllSalesOfShop = () =>{
-        axios.get("http://localhost:8989/get-all-sales-of-shop",{
+        axios.get("http://34.227.148.207:8989/get-all-sales-of-shop",{
             params:{
                 shopId: parseInt(this.state.id)
             }

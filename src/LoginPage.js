@@ -25,7 +25,7 @@ class LoginPage extends React.Component {
     }
 
     login = () => {
-        axios.get("http://127.0.0.1:8989/get-token",{
+        axios.get("http://34.227.148.207:8989/get-token",{
             params:{
                 username:this.state.username,
                 password:this.state.password

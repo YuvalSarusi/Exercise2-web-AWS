@@ -23,7 +23,7 @@ class storesList extends React.Component {
     }
 
     getAllStores =()=>{
-        axios.get("http://localhost:8989/get-all-shops")
+        axios.get("http://34.227.148.207:8989/get-all-shops")
             .then((response)=>{
                 let shopList = response.data
                 this.setState({
