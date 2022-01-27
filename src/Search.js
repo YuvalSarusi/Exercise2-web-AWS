@@ -85,6 +85,12 @@ class search extends React.Component {
                 </div>
                 <p style= {{ color: "red", margin: "30px" }}></p>
                 {
+                    this.state.sales.length == 0
+                        ?
+                        <div>
+                            You Don't Have Any Sales :(
+                        </div>
+                        :
                     this.state.sales.map(sale => {
                         return (
                             <div className={""}>
